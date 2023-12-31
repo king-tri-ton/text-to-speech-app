@@ -17,7 +17,7 @@ This Python script implements a simple Text-to-Speech (TTS) application using th
 
 2. **How to Run:**
     ```bash
-    python your_script_name.py
+    python app.py
     ```
 
 3. **Application Features:**
