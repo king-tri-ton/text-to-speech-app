@@ -2,6 +2,8 @@
 
 This Python script implements a simple Text-to-Speech (TTS) application using the PyQt5 library and the Silero TTS model. The application allows users to enter text, select a speaker, and generate and play audio from the entered text.
 
+![Screenshot_12](https://github.com/king-tri-ton/text-to-speech-app/assets/53092931/558a535b-0194-41e7-8143-76cd10cd4e40)
+
 ## Usage
 
 1. **Requirements:**
