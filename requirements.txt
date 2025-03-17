@@ -1,0 +1,6 @@
+PyQt5
+sounddevice
+soundfile
+torch
+numpy
+omegaconf

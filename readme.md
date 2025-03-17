@@ -1,46 +1,48 @@
-# Text-to-Speech App
+# Text to Speech App
 
-This Python script implements a simple Text-to-Speech (TTS) application using the PyQt5 library and the Silero TTS model. The application allows users to enter text, select a speaker, and generate and play audio from the entered text.
+## Описание
+Этот проект представляет собой приложение для синтеза речи на основе PyQt5 и модели Silero TTS. Приложение позволяет вводить текст, выбирать диктора, генерировать аудиофайлы, проигрывать их и сохранять в формате WAV.
 
+## Требования
+Перед запуском необходимо установить зависимости из `requirements.txt`:
+
+```sh
+pip install -r requirements.txt
+```
+
+Дополнительно потребуется `silero-models`:
+
+```sh
+torch.hub.load('snakers4/silero-models', 'silero_tts', language='ru', speaker='ru_v3')
+```
+
+## Использование
+1. Запустите приложение:
+   ```sh
+   python app.py
+   ```
+2. Введите текст в текстовое поле.
+3. Выберите диктора из списка.
+4. Нажмите **Create Audio** для генерации аудиофайла.
+5. Используйте **Play Audio** для воспроизведения.
+6. Сохраните результат с помощью **Save Audio**.
+
+## Интерфейс
 ![Screenshot_12](https://github.com/king-tri-ton/text-to-speech-app/assets/53092931/558a535b-0194-41e7-8143-76cd10cd4e40)
 
-## Usage
+## Файлы проекта
+- `main.py` — основной файл с кодом GUI и логикой работы.
+- `icon.py` — файл, содержащий иконку в виде base64-строки.
+- `requirements.txt` — список зависимостей.
 
-1. **Requirements:**
-    - Python
-    - PyQt5
-    - sounddevice
-    - soundfile
-    - torch
-    - numpy
-    - silero-models (can be installed using `torch.hub.load`)
+## Возможные ошибки и их исправление
+- **Отсутствует модель**: убедитесь, что интернет-соединение активно при первом запуске.
+- **Нет звука при воспроизведении**: проверьте устройство вывода звука в системе.
+- **Ошибка сохранения файла**: убедитесь, что у вас есть права на запись в указанную директорию.
 
-2. **How to Run:**
-    ```bash
-    python app.py
-    ```
+## Лицензия
+Этот проект распространяется по лицензии [MIT](https://choosealicense.com/licenses/mit/).
 
-3. **Application Features:**
-    - Enter text in the provided text box.
-    - Choose a speaker from the available options.
-    - Click the "Create Audio" button to generate audio from the entered text.
-    - Click the "Play Audio" button to listen to the generated audio.
-    - Click the "Save Audio" button to save the generated audio as a WAV file.
+## Автор
+Разработано для работы с русскоязычным TTS на базе Silero.
 
-4. **Note:**
-    - The script uses the Silero TTS model, which needs to be downloaded during runtime.
-    - The application uses a separate thread to create audio, ensuring the GUI remains responsive during the process.
-    - The generated audio can be played using the "Play Audio" button or saved using the "Save Audio" button.
-
-## Dependencies
-
-- PyQt5
-- sounddevice
-- soundfile
-- torch
-- numpy
-- silero-models
-
-## License
-
-This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/) License.
